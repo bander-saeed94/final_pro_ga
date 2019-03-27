@@ -45,7 +45,7 @@ $(document).ready(function () {
   function appendTolist() {
     onlineUser.forEach((elem) => {
       console.log(getDistanceFromLatLonInKm(base.latitude, base.longitude, elem.location.latitude, elem.location.longitude))
-      if (getDistanceFromLatLonInKm(base.latitude, base.longitude, elem.location.latitude, elem.location.longitude) < 0.1) {
+      if (getDistanceFromLatLonInKm(base.latitude, base.longitude, elem.location.latitude, elem.location.longitude) < 1) {
         $('#list').append(`<li> ${elem.username} </li>`)
       }
     })
